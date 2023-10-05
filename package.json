@@ -1,0 +1,20 @@
+{
+  "name": "project-last-courses",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "main": "sass scss/main_layout/main.scss asset/css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Delunsss2345/project__end-f8.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Delunsss2345/project__end-f8/issues"
+  },
+  "homepage": "https://github.com/Delunsss2345/project__end-f8#readme"
+}
