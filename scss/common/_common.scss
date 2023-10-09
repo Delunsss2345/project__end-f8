@@ -1,3 +1,4 @@
+
 *,
 ::after,
 ::before {
@@ -8,11 +9,11 @@ html {
   font-size: 62.5%;
 }
 
-.primary__h1 {
+body {
+  font-size: 1.6rem;
+  font-family: Gordita, sans-serif;
 }
-.primary__h2 {
-}
-.primary__h3 {
-}
-.primary__h4 {
+.icon {
+  filter: var(--icon-color);
+  transition: filter 0.2s;
 }
