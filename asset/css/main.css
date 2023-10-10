@@ -1505,15 +1505,30 @@ a {
 }
 
 .action__grocery--block,
-.action__beauty--block, .action__electronic--block, .action__departments--block, .action__favorite--block, .action__card--block {
+.action__beauty--block, .action__favorite--block, .action__card--block {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
+.action__departments--group {
+  width: 100%;
+}
+
 .action__item--list-block {
   display: flex;
+}
+
+.action__item--list-block-departments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.action__saving--block {
+  margin-bottom: 14px;
 }
 
 .action__card--block .action__item--list-block .action__name--card {
@@ -1577,6 +1592,19 @@ a {
   line-height: 20px; /* 142.857% */
 }
 
+.action__electronic--block {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  overflow: hidden;
+  transition: height 0.1s;
+}
+.action__electronic--block .action__electronic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .action__name--electronic {
   color: var(--blue-blue, #0071dc);
   /* Medium 14 */
@@ -1633,6 +1661,8 @@ a {
   display: flex;
   flex-direction: column;
   row-gap: 36px;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 .list__product--mobile {
@@ -1663,6 +1693,22 @@ a {
 
 .disPlayNone {
   display: none;
+}
+
+.action__departments--group {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 20px;
+  transform: height 0.1s;
+}
+
+.elementHeight {
+  height: 100% !important;
+}
+
+.rotate90deg {
+  rotate: 90deg;
 }
 
 /*# sourceMappingURL=main.css.map */
