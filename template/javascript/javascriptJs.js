@@ -25,3 +25,17 @@ electronicAction.onclick = function () {
   electronicAction.classList.toggle("rotate90deg");
   electronicElementAll.classList.toggle("elementHeight");
 };
+//Grocery 
+var groceryElement = document.querySelector(".action__img-grocery");
+var groceryGroup = document.querySelector(".action__block--grocery--group") ;
+groceryElement.onclick = function () {
+  groceryElement.classList.toggle("rotate90deg");
+  groceryGroup.classList.toggle("elementHeight");
+};
+// Beauty 
+var beautyElement = document.querySelector(".action__img-beauty"); 
+var beautyGroup = document.querySelector(".action__beauty--group") ;
+beautyElement.onclick = function () {
+  beautyElement.classList.toggle("rotate90deg");
+  beautyGroup.classList.toggle("elementHeight");
+}
