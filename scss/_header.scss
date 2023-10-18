@@ -221,6 +221,9 @@ a {
     transition: color 0.2s;
   }
 }
+.action__img-electronic , .action__img-departments ,.action__img-grocery,.action__img-beauty {
+ transition: rotate 0.25s;
+}
 .user__avatar {
   width: 50px;
   height: 50px;
@@ -230,7 +233,7 @@ a {
   transition: border-color 0.4s;
   cursor: pointer;
   &:hover {
-    border-color: #525151;
+    border-color: var(--secondary-color-secondary-1);
   }
   img {
     width: 100%;
