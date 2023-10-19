@@ -1736,6 +1736,13 @@ a {
   border-radius: 20px;
   background: var(--secondary-color, #77dae6);
 }
+@media (max-width: 575.98px) {
+  .hero__content {
+    width: 335px;
+    height: 166px;
+    padding: 20px;
+  }
+}
 
 .hero__title {
   width: 386px;
@@ -1746,6 +1753,18 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: 60px; /* 142.857% */
+}
+@media (max-width: 575.98px) {
+  .hero__title {
+    width: 138px;
+    color: var(--secondary-color-background, #fff);
+    /* Bold 15 */
+    font-family: Gordita;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 146.667% */
+  }
 }
 
 .hero__content--product-bgr-main {
@@ -1760,6 +1779,14 @@ a {
   height: 100%;
   flex-shrink: 0;
 }
+@media (max-width: 575.98px) {
+  .hero__content--product-bgr-main {
+    width: 163px;
+    height: 111px;
+    transform: translateY(39px);
+    margin-right: -20px;
+  }
+}
 
 .hero__content--title {
   display: flex;
@@ -1771,7 +1798,8 @@ a {
   display: flex;
   align-items: center;
 }
-.hero__list---choice .number, .hero__list---choice .number-2 {
+.hero__list---choice .number,
+.hero__list---choice .number-2 {
   display: block;
   margin-right: 10px;
   color: var(--secondary-color-background, #fff);
@@ -1782,6 +1810,18 @@ a {
   font-style: normal;
   font-weight: 500;
   line-height: 26px; /* 144.444% */
+}
+@media (max-width: 575.98px) {
+  .hero__list---choice .number,
+  .hero__list---choice .number-2 {
+    color: var(--secondary-color-background, #fff);
+    /* Medium 14 */
+    font-family: Gordita;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+  }
 }
 .hero__list---choice .number-2 {
   margin-left: 10px;
@@ -1798,6 +1838,13 @@ a {
   height: 4px;
   background: #fff;
 }
+@media (max-width: 575.98px) {
+  .hero__list---choice .light {
+    width: 73px;
+    height: 3px;
+    flex-shrink: 0;
+  }
+}
 
 .hero__content--product-extra {
   position: absolute;
@@ -1807,6 +1854,14 @@ a {
   width: 121px;
   height: 162px;
   flex-shrink: 0;
+}
+@media (max-width: 575.98px) {
+  .hero__content--product-extra {
+    width: 39px;
+    height: 53px;
+    bottom: 27px;
+    right: 15px;
+  }
 }
 .hero__content--product-extra .background-product {
   width: 100%;
@@ -1820,6 +1875,14 @@ a {
   width: 250px;
   height: 320px;
   flex-shrink: 0;
+}
+@media (max-width: 575.98px) {
+  .hero__content--product {
+    width: 84px;
+    height: 107px;
+    bottom: 31px;
+    right: 34px;
+  }
 }
 .hero__content--product .cafe-product-hero {
   width: 100%;
