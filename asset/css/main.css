@@ -1112,6 +1112,7 @@ html.dark {
   --secondary-color-background:#292E39 ;
   --color-box-shadow:rgba(0, 0, 0, 0.20) ;
   --hover-header-color:#fff;
+  --item-color: #171C28 ;
 }
 
 html {
@@ -1122,6 +1123,7 @@ html {
   --secondary-color-background:#fff ;
   --color-box-shadow:rgba(237, 237, 246, 0.2);
   --hover-header-color:#333;
+  --item-color: #C1C1C1 ;
 }
 
 a {
@@ -1726,19 +1728,22 @@ a {
   rotate: 90deg;
 }
 
+.hero__main {
+  padding-top: 40px;
+  background-color: var(--secondary-color-background, #eeeeee);
+}
+
 .hero__content {
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 455px;
   padding: 42px 70px;
-  margin-top: 40px;
   border-radius: 20px;
   background: var(--secondary-color, #77dae6);
 }
 @media (max-width: 575.98px) {
   .hero__content {
-    width: 335px;
     height: 166px;
     padding: 20px;
   }
@@ -1887,6 +1892,87 @@ a {
 .hero__content--product .cafe-product-hero {
   width: 100%;
   height: 100%;
+}
+
+.categories__main {
+  padding-top: 40px;
+  background-color: var(--secondary-color-background, #eeeeee);
+}
+@media (max-width: 575.98px) {
+  .categories__main {
+    padding-top: 10px;
+  }
+}
+
+.categories__title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--hover-header-color);
+  /* Bold 24 */
+  font-family: Gordita;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px; /* 141.667% */
+}
+
+.categories__list--block {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 407px);
+  grid-template-rows: 156px;
+}
+@media (max-width: 575.98px) {
+  .categories__list--block {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
+
+.categories__item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  column-gap: 20px;
+  border-radius: 16px;
+  background-color: var(--item-color, #c1c1c1);
+}
+
+.categories__item--logo {
+  width: 116px;
+  height: 116px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.categories__item--logo {
+  width: 116px;
+  height: 116px;
+}
+.categories__item--logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.categories__item--title {
+  color: var(--hover-header-color);
+  /* Bold 22 */
+  font-family: Gordita;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 145.455% */
+}
+
+.categories__item--desc {
+  width: 180px;
+  color: var(--secondary-color-secondary-1, #1a162e);
+  /* Regular 16 */
+  font-family: Gordita;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
 }
 
 /*# sourceMappingURL=main.css.map */
