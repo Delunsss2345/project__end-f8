@@ -1,7 +1,7 @@
 @use "../abstracts";
 .categories__main {
   padding-top: 40px;
-  background-color: var(--secondary-color-background, #eeeeee);
+  background-color: var(--background--all-, #eeeeee);
   @include abstracts.breakpoint(sm) {
     padding-top: 10px;
   }
@@ -9,13 +9,14 @@
 .categories__title {
   margin-top: 20px;
   margin-bottom: 20px;
-  color:var(--hover-header-color);
+  color: var(--hover-header-color);
   /* Bold 24 */
   font-family: Gordita;
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 700;
   line-height: 34px; /* 141.667% */
+  transition: color 0.2s;
 }
 .categories__list--block {
   display: grid;
@@ -34,6 +35,14 @@
   column-gap: 20px;
   border-radius: 16px;
   background-color: var(--item-color, #c1c1c1);
+  transition: background-color 0.2s , transform 0.4s;
+  &:hover {
+    transform: translateY(-6px) ;
+  }
+  @include abstracts.breakpoint(sm) {
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
 }
 .categories__item--logo {
   width: 116px;

@@ -1108,11 +1108,12 @@ html.dark {
   --secondary-color-secondary-1: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(10%)
     saturate(7500%) hue-rotate(221deg) brightness(122%) contrast(108%);
-  --Background-3:#171C28 ;
-  --secondary-color-background:#292E39 ;
-  --color-box-shadow:rgba(0, 0, 0, 0.20) ;
-  --hover-header-color:#fff;
-  --item-color: #171C28 ;
+  --Background-3: #171c28;
+  --secondary-color-background: #292e39;
+  --color-box-shadow: rgba(0, 0, 0, 0.2);
+  --hover-header-color: #fff;
+  --item-color: #171c28;
+  --background--all-: #292e39;
 }
 
 html {
@@ -1123,7 +1124,8 @@ html {
   --secondary-color-background:#fff ;
   --color-box-shadow:rgba(237, 237, 246, 0.2);
   --hover-header-color:#333;
-  --item-color: #C1C1C1 ;
+  --item-color: #eee ;
+  --background--all-: rgb(198, 198, 198 , 0.1) ;
 }
 
 a {
@@ -1179,6 +1181,7 @@ a {
   position: relative;
 }
 .navigation_item:hover .extra__list--choice-block {
+  z-index: 9;
   opacity: 1;
   visibility: visible;
   transition: opacity 0.4s, visibility 0.4s;
@@ -1361,7 +1364,10 @@ a {
   transition: color 0.2s;
 }
 
-.action__img-electronic, .action__img-departments, .action__img-grocery, .action__img-beauty {
+.action__img-electronic,
+.action__img-departments,
+.action__img-grocery,
+.action__img-beauty {
   transition: rotate 0.25s;
 }
 
@@ -1730,7 +1736,8 @@ a {
 
 .hero__main {
   padding-top: 40px;
-  background-color: var(--secondary-color-background, #eeeeee);
+  background-color: var(--background--all-, #eeeeee);
+  transition: background-color 0.2s;
 }
 
 .hero__content {
@@ -1758,6 +1765,7 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: 60px; /* 142.857% */
+  transition: color 0.2s;
 }
 @media (max-width: 575.98px) {
   .hero__title {
@@ -1809,6 +1817,7 @@ a {
   margin-right: 10px;
   color: var(--secondary-color-background, #fff);
   font-feature-settings: "clig" off, "liga" off;
+  transition: color 0.2s;
   /* Medium 18 */
   font-family: Gordita;
   font-size: 1.8rem;
@@ -1896,7 +1905,7 @@ a {
 
 .categories__main {
   padding-top: 40px;
-  background-color: var(--secondary-color-background, #eeeeee);
+  background-color: var(--background--all-, #eeeeee);
 }
 @media (max-width: 575.98px) {
   .categories__main {
@@ -1914,6 +1923,7 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: 34px; /* 141.667% */
+  transition: color 0.2s;
 }
 
 .categories__list--block {
@@ -1936,6 +1946,16 @@ a {
   column-gap: 20px;
   border-radius: 16px;
   background-color: var(--item-color, #c1c1c1);
+  transition: background-color 0.2s, transform 0.4s;
+}
+.categories__item:hover {
+  transform: translateY(-6px);
+}
+@media (max-width: 575.98px) {
+  .categories__item {
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
 }
 
 .categories__item--logo {
@@ -1972,6 +1992,158 @@ a {
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.total__main {
+  padding-top: 40px;
+  background-color: var(--background--all-, #eeeeee);
+}
+
+.total__main--top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total__main--title {
+  margin-bottom: 21px;
+  color: var(--secondary-color-secondary-1, #1a162e);
+  /* Bold 24 */
+  font-family: Gordita;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px; /* 141.667% */
+}
+
+.total__main--filter {
+  display: flex;
+  width: 101px;
+  height: 36px;
+  padding: 6px 12px;
+  align-items: center;
+  gap: 14px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.total__main--filter .total__main--filter-name {
+  color: #6c6c72;
+  /* Bold 14 */
+  font-family: Gordita;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 142.857% */
+}
+
+.total__main--list-product {
+  display: grid;
+  grid-template-columns: repeat(4, 312px);
+  justify-content: space-between;
+}
+.total__main--list-product .total__main--item {
+  padding: 16px;
+  border-radius: 20px;
+  background: var(--secondary-color-background, #fff);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+}
+.total__main--list-product .total__main--item:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.total__main--logo-item {
+  position: relative;
+  width: 280px;
+  height: 284px;
+}
+.total__main--logo-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.total__main--heart-extra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.total__main--heart-extra:hover .Heart__hover {
+  visibility: visible;
+  opacity: 1;
+}
+.total__main--heart-extra .Heart {
+  width: 24px;
+  height: 24px;
+}
+.total__main--heart-extra .Heart__hover {
+  width: 78px;
+  height: 47px;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  top: 6px;
+  transform: translateY(1%);
+  right: -14px;
+  transition: visibility 0.2s, opacity 0.1s;
+}
+
+.total__main--intro--group {
+  margin-top: 16px;
+}
+.total__main--intro--group .total__main--intro-title {
+  margin-bottom: 16px;
+  color: var(--secondary-color-secondary-1, #1a162e);
+  /* Medium 16 */
+  font-family: Gordita;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+.total__main--intro--group .total__main--intro-desc {
+  margin-bottom: 16px;
+  color: var(--secondary-color-secondary-2, #9e9da8);
+  /* Regular 15 */
+  font-family: Gordita;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+}
+
+.total__main--intro-price-group,
+.total__main--intro-starGroup {
+  display: flex;
+  align-items: center;
+}
+
+.total__main--intro-price-group {
+  justify-content: space-between;
+}
+
+.total__main--intro-starGroup {
+  column-gap: 6px;
+}
+
+.total__main--intro-price,
+.total__main--rate {
+  color: var(--secondary-color-secondary-1, #1a162e);
+  /* Medium 16 */
+  font-family: Gordita;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
   line-height: 24px; /* 150% */
 }
 

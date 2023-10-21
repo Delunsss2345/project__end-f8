@@ -39,3 +39,9 @@ beautyElement.onclick = function () {
   beautyElement.classList.toggle("rotate90deg");
   beautyGroup.classList.toggle("elementHeight");
 }
+// Action heart 
+var heartElement = document.querySelector(".total__main--heart-extra") ; 
+var heartHover = document.querySelector(".Heart__hover");
+heartElement.onclick = function () {
+  heartHover.classList.toggle("visibility_visible") ; 
+}

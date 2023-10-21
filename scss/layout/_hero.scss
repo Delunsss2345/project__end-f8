@@ -1,7 +1,8 @@
 @use "../abstracts";
 .hero__main {
   padding-top: 40px;
-  background-color: var(--secondary-color-background, #eeeeee);
+  background-color: var(--background--all-, #eeeeee);
+  transition: background-color 0.2s;
 }
 .hero__content {
   display: flex;
@@ -25,6 +26,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 60px; /* 142.857% */
+  transition: color 0.2s;
   @include abstracts.breakpoint(sm) {
     width: 138px;
     color: var(--secondary-color-background, #fff);
@@ -69,7 +71,7 @@
     margin-right: 10px;
     color: var(--secondary-color-background, #fff);
     font-feature-settings: "clig" off, "liga" off;
-
+    transition: color 0.2s;
     /* Medium 18 */
     font-family: Gordita;
     font-size: 1.8rem;

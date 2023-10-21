@@ -44,6 +44,7 @@ a {
   position: relative;
   &:hover {
     .extra__list--choice-block {
+      z-index: 9;
       opacity: 1;
       visibility: visible;
       transition: opacity 0.4s, visibility 0.4s;
@@ -221,8 +222,11 @@ a {
     transition: color 0.2s;
   }
 }
-.action__img-electronic , .action__img-departments ,.action__img-grocery,.action__img-beauty {
- transition: rotate 0.25s;
+.action__img-electronic,
+.action__img-departments,
+.action__img-grocery,
+.action__img-beauty {
+  transition: rotate 0.25s;
 }
 .user__avatar {
   width: 50px;
@@ -563,14 +567,14 @@ a {
   overflow: hidden;
   height: 25px;
 }
-// Block Grocery 
-.action__block--grocery--group{
+// Block Grocery
+.action__block--grocery--group {
   width: 100%;
   height: 25px;
   overflow: hidden;
 }
 // Beauty
-.action__beauty--group{
+.action__beauty--group {
   width: 100%;
   height: 25px;
   overflow: hidden;
