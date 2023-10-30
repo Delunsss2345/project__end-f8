@@ -40,7 +40,7 @@
     transform: translateY(-6px) ;
   }
   @include abstracts.breakpoint(sm) {
-    background-color: #fff;
+    background-color: var(--item-color, #c1c1c1);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 }
